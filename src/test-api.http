@@ -1,0 +1,40 @@
+### 1. Créer ton utilisateur (Alan Bombo)
+POST http://127.0.0.1:8080/api/users
+Content-Type: application/json
+
+{
+  "nom": "Bombo",
+  "prenom": "Alan",
+  "email": "alan.bombo@condorcet.be",
+  "motDePasse": "123456",
+  "isAdmin": true
+}
+
+### 2. Vérifier que tu es bien créé
+GET http://127.0.0.1:8080/api/users
+
+### 3. Alan ajoute une Perceuse (ID 1)
+POST http://127.0.0.1:8080/api/tools/user/1
+Content-Type: application/json
+
+{
+  "nom": "Perceuse Bosch",
+  "description": "Perceuse à percussion 750W",
+  "categorie": "Bricolage",
+  "disponible": true
+}
+
+### 4. Vérifier les outils
+GET http://127.0.0.1:8080/api/tools
+
+### Créer le 2ème utilisateur (Bob le Voisin)
+POST http://127.0.0.1:8080/api/users
+Content-Type: application/json
+
+{
+  "nom": "Leroi",
+  "prenom": "Bob",
+  "email": "bob@condorcet.be",
+  "motDePasse": "123456",
+  "isAdmin": false
+}
